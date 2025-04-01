@@ -1,38 +1,70 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Ensure the entire page has a white background and black text */
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Arial', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Adjust the header styling */
 .App-header {
-  background-color: #282c34;
+  background-color: #e3e3e3; /* Light gray background */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 10vmin);
+  color: black;
+}
+
+/* Add spacing around the main content */
+.main-content {
+  padding: 20px;
+}
+
+/* Ensure navbar is styled correctly */
+.navbar {
+  border-bottom: 1px solid #ccc; /* Grey dividing line below navbar */
+}
+
+/* Add some margin around sections */
+.section {
+  padding: 40px 20px;
+}
+
+/* Custom styling for the protein select dropdown */
+.protein-select {
+  background-color: #C00000;
   color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+  -webkit-appearance: none; /* Remove default arrow in Chrome/Safari */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none; /* Standard property to remove default arrow */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white'><polygon points='0,0 12,0 6,12'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px; /* Space for the custom arrow */
+  cursor: pointer; /* Better UX */
+  width: 200px; /* Optional: set a fixed width for consistency */
 }
 
-.App-link {
-  color: #61dafb;
+/* Remove default arrow in IE/Edge */
+.protein-select::-ms-expand {
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Ensure focus state is clean */
+.protein-select:focus {
+  outline: none;
+  box-shadow: 0 0 3px #C00000; /* Optional: subtle focus indicator */
+}
+
+/* Style the options to match the dropdown */
+.protein-select option {
+  background-color: #C00000;
+  color: white;
 }

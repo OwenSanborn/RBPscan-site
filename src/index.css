@@ -1,13 +1,65 @@
+/* App.css */
+
+/* Ensure the entire page has a white background and black text */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: white;
+  color: black;
+  font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Adjust the header styling */
+.App-header {
+  color: black !important;
+  background-color: #e3e3e3; /* Light gray background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 10vmin);
+  color: black;
+}
+
+/* Add spacing around the main content */
+.main-content {
+  padding: 20px;
+}
+
+/* Ensure navbar is styled correctly */
+.navbar {
+  border-bottom: 1px solid #ccc; /* Grey dividing line below navbar */
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Add some margin around sections */
+.section {
+  padding: 40px 20px;
+}
+
+/* Ensures monospace code font usage for code elements */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'source-code-pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Example of global link styles */
+a {
+  color: #C00000; /* Bulma's primary link color */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C00000;
+  font-weight: bold;
+}
+
+/* If you need custom container styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
