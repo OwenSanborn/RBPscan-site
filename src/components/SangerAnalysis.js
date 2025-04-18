@@ -22,7 +22,8 @@ const Analysis = () => {
   const [error, setError] = useState(null);
   const [processingStatus, setProcessingStatus] = useState('');
 
-  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+  // API URL setup: check if it’s a local or production environment
+  const API_URL = process.env.REACT_APP_API_URL || '/.netlify/functions/ab1-analysis';
 
   const handleFileUpload = (event) => {
     const uploadedFiles = Array.from(event.target.files);
@@ -197,7 +198,9 @@ const Analysis = () => {
     <div className="container p-5">
       <h1 className="title is-3 has-text-black mb-4">Sanger Analysis</h1>
 
+      {/* File upload and analysis buttons */}
       <div className="field is-grouped mb-5" style={{ alignItems: 'center' }}>
+        {/* File input */}
         <div className="control is-flex is-align-items-center">
           <div className="file has-name is-rounded">
             <label className="file-label">
@@ -218,6 +221,7 @@ const Analysis = () => {
           </div>
         </div>
 
+        {/* Analyze button */}
         <div className="control">
           <button
             onClick={processFiles}
@@ -236,8 +240,10 @@ const Analysis = () => {
         </div>
       </div>
 
+      {/* Table and Chart */}
       {metadata.length > 0 && (
         <div className="columns" style={{ fontSize: '0.85rem' }}>
+          {/* Table */}
           <div className="column is-half">
             <table
               className="table is-bordered has-text-black"
@@ -297,6 +303,7 @@ const Analysis = () => {
             )}
           </div>
 
+          {/* Chart */}
           {results && (
             <div className="column is-half" style={{ minHeight: '400px' }}>
               <Bar data={results} options={chartOptions(results.chartMax)} />
