@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Citing() {
   return (
     <div className="container mt-6">

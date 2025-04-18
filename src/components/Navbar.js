@@ -12,11 +12,12 @@ function Navbar() {
 
       {/* Right side: Navigation links */}
       <div className="navbar-end">
-        <Link to="/data" className="navbar-item ">Explore Data</Link>
-        <Link to="/download" className="navbar-item ">Download</Link>
-        <Link to="/protocols" className="navbar-item ">Protocols</Link>
-        <Link to="/news" className="navbar-item ">News</Link>
-        <Link to="/citing" className="navbar-item ">Citing</Link>
+        <Link to="/Data" className="navbar-item ">Explore Data</Link>
+        <Link to="/Analysis" className="navbar-item ">Analyze Data</Link>
+        <Link to="/Download" className="navbar-item ">Download</Link>
+        <Link to="/Protocols" className="navbar-item ">Protocols</Link>
+        <Link to="/News" className="navbar-item ">News</Link>
+        <Link to="/Citing" className="navbar-item ">Citing</Link>
       </div>
     </nav>
   );

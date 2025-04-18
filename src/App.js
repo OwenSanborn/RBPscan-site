@@ -9,6 +9,7 @@ import Protocols from "./pages/Protocols";
 import News from "./pages/News"; 
 import Download from "./pages/Download"; 
 import Data from "./pages/Data"; 
+import Analysis from "./pages/Analysis"; 
 
 function App() {
   return (
@@ -18,11 +19,12 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/citing" element={<Citing />} />
-            <Route path="/protocols" element={<Protocols />} />
-            <Route path="/news" element={<News />} />
-            <Route path="/download" element={<Download />} />
-            <Route path="/data" element={<Data />} />
+            <Route path="/Data" element={<Data />} />
+            <Route path="/Analysis" element={<Analysis />} />
+            <Route path="/Citing" element={<Citing />} />
+            <Route path="/Protocols" element={<Protocols />} />
+            <Route path="/News" element={<News />} />
+            <Route path="/Download" element={<Download />} />
           </Routes>
         </div>
         <Footer />

@@ -34,37 +34,14 @@ body {
   padding: 40px 20px;
 }
 
-/* Custom styling for the protein select dropdown */
-.protein-select {
-  background-color: #C00000;
-  color: white;
-  border-radius: 20px;
-  padding: 5px 10px;
-  border: none;
-  -webkit-appearance: none; /* Remove default arrow in Chrome/Safari */
-  -moz-appearance: none; /* Remove default arrow in Firefox */
-  appearance: none; /* Standard property to remove default arrow */
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white'><polygon points='0,0 12,0 6,12'/></svg>");
-  background-repeat: no-repeat;
-  background-position: right 10px center;
-  padding-right: 30px; /* Space for the custom arrow */
-  cursor: pointer; /* Better UX */
-  width: 200px; /* Optional: set a fixed width for consistency */
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Arial', sans-serif;
 }
-
-/* Remove default arrow in IE/Edge */
-.protein-select::-ms-expand {
-  display: none;
-}
-
-/* Ensure focus state is clean */
-.protein-select:focus {
-  outline: none;
-  box-shadow: 0 0 3px #C00000; /* Optional: subtle focus indicator */
-}
-
-/* Style the options to match the dropdown */
-.protein-select option {
-  background-color: #C00000;
-  color: white;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
