@@ -290,9 +290,9 @@ const Analysis = () => {
             </table>
             {results && (
               <p style={{ fontSize: '0.85rem', marginTop: '0.5rem' }}>
-                <a onClick={exportToCSV} style={{ cursor: 'pointer', color: '#C00000', textDecoration: 'underline' }}>
+                <button onClick={exportToCSV} style={{ cursor: 'pointer', color: '#C00000', textDecoration: 'underline' }}>
                   Export to CSV
-                </a>
+                </button>
               </p>
             )}
           </div>
