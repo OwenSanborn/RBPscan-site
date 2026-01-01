@@ -42,7 +42,7 @@ app.post("/analyze", upload.array("files"), async (req, res) => {
     const tempJsonPath = path.join(tmpdir(), `input-${Date.now()}.json`);
     await writeFile(tempJsonPath, inputJson);
 
-    const rProcess = spawn("Rscript", ["analysis.r", tempJsonPath]);
+    const rProcess = spawn("/usr/bin/Rscript", ["analysis.r", tempJsonPath]);
 
     let output = "";
 
