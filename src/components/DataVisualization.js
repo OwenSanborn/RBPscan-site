@@ -26,7 +26,7 @@ const DataVisualization = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('/rbp_data.csv');
+        const response = await fetch('/tools/rbpscan/rbp_data.csv');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
         const csvText = await response.text();

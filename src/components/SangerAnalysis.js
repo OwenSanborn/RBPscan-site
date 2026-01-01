@@ -23,7 +23,7 @@ const Analysis = () => {
   const [processingStatus, setProcessingStatus] = useState('');
 
   // API URL setup: check if it’s a local or production environment
-  const API_URL = process.env.REACT_APP_API_URL || '/.netlify/functions/ab1-analysis';
+  const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
 
   const handleFileUpload = (event) => {
     const uploadedFiles = Array.from(event.target.files);

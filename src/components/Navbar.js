@@ -15,8 +15,6 @@ function Navbar() {
         <Link to="/Data" className="navbar-item ">Explore Data</Link>
         <Link to="/Analysis" className="navbar-item ">Analyze Data</Link>
         <Link to="/Download" className="navbar-item ">Download</Link>
-        <Link to="/Protocols" className="navbar-item ">Protocols</Link>
-        <Link to="/News" className="navbar-item ">News</Link>
         <Link to="/Citing" className="navbar-item ">Citing</Link>
       </div>
     </nav>
