@@ -22,7 +22,7 @@ RUN which R && which Rscript
 # Install R packages
 RUN R -e "install.packages('BiocManager', repos='http://cran.rstudio.com/')" \
     && R -e "BiocManager::install(c('sangerseqR', 'Biostrings'))" \
-    && R -e "install.packages('gamlss', repos='http://cran.rstudio.com/')"
+    && R -e "install.packages(c('gamlss', 'dplyr', 'stringr', 'jsonlite'), repos='http://cran.rstudio.com/')"
 
 # Set PATH to ensure Rscript is found
 ENV PATH="/usr/local/bin:${PATH}"
