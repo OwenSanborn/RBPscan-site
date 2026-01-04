@@ -2,9 +2,4 @@ services:
   - type: web
     name: rbpscan-backend
     env: docker
-    dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
     plan: free
-    envVars:
-      - key: PORT
-        value: 10000
