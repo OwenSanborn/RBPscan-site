@@ -1,16 +1,18 @@
 # Use R base image
 FROM rocker/r-base:latest
 
-# Install Node.js and other dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     curl \
     libcurl4-openssl-dev \
     libssl-dev \
-    libxml2-dev \
-    && curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+    libxml2-dev
+
+# Install Node.js
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
     && apt-get install -y nodejs \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+    && node --version \
+    && npm --version
 
 # Verify R and Rscript are available
 RUN which R && which Rscript
