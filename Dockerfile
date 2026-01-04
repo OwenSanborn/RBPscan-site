@@ -9,10 +9,12 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev
 
 # Install Node.js
-RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
-    && node --version \
-    && npm --version
+    && node --version
+
+# Install npm globally using npx if needed, or verify npm exists
+RUN npm --version || (curl -qL https://www.npmjs.com/install.sh | sh)
 
 # Verify R and Rscript are available
 RUN which R && which Rscript
